@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calender</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <div class="main">
+
+        <div class="calender">
+
+            <h1 id="head">Welcome To Thise calender </h1>
+
+            <form action="" id="form">
+                <select id="month">
+                    <option class="option" value="Janevary">Janevary</option>
+                    <option class="option" value="Feburvary">Feburvary</option>
+                    <option class="option" value="March">March</option>
+                    <option class="option" value="April">April</option>
+                    <option class="option" value="May">May</option>
+                    <option class="option" value="Jun">Jun</option>
+                    <option class="option" value="Jully">Jully</option>
+                    <option class="option" value="August">August</option>
+                    <option class="option" value="September">September</option>
+                    <option class="option" value="Actommber">Actommer</option>
+                    <option class="option" value="November">November</option>
+                    <option class="option" value="December">December</option>
+                </select>
+                <br>
+                <br>
+
+                <input type="text" id="year">
+                <br>
+                <br>
+                <input type="button" value="Cheak" onclick="output()" id="btn">
+
+                <br>
+                <br>
+                <input type="text" id="result">
+                <br>
+                <br>
+
+                <input type="button" value="delete" onclick="clr()" id="btn">
+            </form>
+        </div>
+
+    </div>
+
+    <script>
+
+        function output() {
+
+            month = (form.month.value);
+
+            year = (form.year.value);
+
+            result = month + year;
+
+
+
+            if (month == "Janevary") {
+
+                form.result.value = (month + " Thise Month -31Day " + year);
+
+            }
+            else if ((year % 4 == 0) && (year % 100 != 0)) {
+
+                form.result.value = (month + "e  is leap year -29Day " + year)
+
+            }
+            else if (year % 400 == 0) {
+
+                form.result.value = (month + "Thise  is leap year -29Day " + year)
+
+            }
+            else if (month == "Feburvary") {
+
+                form.result.value = (month + " This is not leap year -28Day " + year)
+
+            }
+            else if (month == "March") {
+
+                form.result.value = (month + " Thise Month -31Day " + year);
+            }
+            else if (month == "April") {
+
+                form.result.value = (month + " Thise Month -30Day " + year);
+            }
+            else if (month == "May") {
+
+                form.result.value = (month + " Thise Month -31Day " + year);
+
+            }
+            else if (month == "Jun") {
+
+                form.result.value = (month + " Thise Month -30Day " + year);
+
+            }
+            else if (month == "Jully") {
+
+                form.result.value = (month + " This Month -31Day " + year);
+
+            }
+            else if (month == "August") {
+
+                form.result.value = (month + " Thise Month -31Day " + year);
+
+            }
+            else if (month == "September") {
+
+                form.result.value = (month + " Thise Month -30Day " + year);
+
+            }
+            else if (month == "Actommber") {
+
+                form.result.value = (month + " Thise Month -31Day " + year);
+            }
+            else if (month == "November") {
+
+                form.result.value = (month + " Thise Month -30Day" + year);
+
+            }
+            else if (month == "December") {
+
+                form.result.value = (month + " Thise Month -31Day " + year);
+
+            }
+            else {
+
+                form.result.value = ("invalid Month")
+            }
+
+        }
+
+        function clr(){
+
+            form.result.value="........ ";
+        }
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
